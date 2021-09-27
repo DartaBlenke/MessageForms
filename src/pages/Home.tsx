@@ -6,17 +6,16 @@ import '../styles/global.scss';
  
 export function Home () {
   const alertValues = [
-    {value: 'valor1', label: 'alerta 1'},
-    {value: 'valor2', label: 'alerta 2'},
-    {value: 'valor3', label: 'alerta 3'},
-    {value: 'valor4', label: 'alerta 4'},
+    {value: 'alerta1', label: 'Alerta de Zabbix fora do ar'},
+    {value: 'alerta2', label: 'Alerta de DBForbix fora do ar'},
+    {value: 'alerta3', label: 'Alerta de Orabbix fora do ar'},
+    {value: 'alerta4', label: 'Alerta de todos os Agentes fora do ar'},
   ]
 
   const messageValues = [
-    {value: 'valor1', label: 'mensagem 1'},
-    {value: 'valor2', label: 'mensagem 2'},
-    {value: 'valor3', label: 'mensagem 3'},
-    {value: 'valor4', label: 'mensagem 4'},
+    {value: 'mensagem1', label: 'Olá, bom dia [nome], mensagem de alerta...'},
+    {value: 'mensagem2', label: 'Olá, boa tarde [nome], mensagem de alerta...'},
+    {value: 'mensagem3', label: 'Olá, boa noite [nome], mensagem de alerta...'},
   ]
 
   return (
@@ -52,7 +51,7 @@ export function Home () {
 
         <Input name="Data" type="date" title="Data" placeholder=""/>
 
-        <Input name="Horas" type="time" title="Horas Ativo" placeholder=""/>
+        <Input name="Horas" type="time" title="Hora de Solução" placeholder=""/>
       </div>
 
       <Input className="mensagemCompleta" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
