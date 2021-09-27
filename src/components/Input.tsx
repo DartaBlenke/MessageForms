@@ -1,11 +1,14 @@
-import { InputHTMLAttributes } from 'react';
+import '../styles/inputs.scss';
 
-type InputProps = InputHTMLAttributes<HTMLInputElement>;
+interface InputProps extends React.HTMLProps<HTMLInputElement> {
+  title: string;
+}
 
 export function Input(props: InputProps) {
   return (
+    <div className="inputs">
+    <h3>{props.title}</h3>
     <input className="input" {...props} />
+    </div>
   )
 }
-
-
