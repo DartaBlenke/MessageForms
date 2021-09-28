@@ -4,6 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <script src="hhttps://cdnjs.com/libraries/jquery.mask">
+      $(document).ready(function(){
+        $('.date').mask('00/00/0000');
+        $('.time').mask('00:00:00');
+        $('.phone').mask('(00) 00000-0000');
+        $('.cpf').mask('000.000.000-00');
+        $('.money').mask('000.000.000.000,00');
+      });
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">

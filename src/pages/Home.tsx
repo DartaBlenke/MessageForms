@@ -1,62 +1,31 @@
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 import { Select } from "../components/Select";
+import { Title } from "../components/Title";
 import '../styles/home.scss';
 import '../styles/global.scss';
- 
-export function Home () {
-  const alertValues = [
-    {value: 'alerta1', label: 'Alerta de Zabbix fora do ar'},
-    {value: 'alerta2', label: 'Alerta de DBForbix fora do ar'},
-    {value: 'alerta3', label: 'Alerta de Orabbix fora do ar'},
-    {value: 'alerta4', label: 'Alerta de todos os Agentes fora do ar'},
-  ]
 
-  const messageValues = [
-    {value: 'mensagem1', label: 'Olá, bom dia [nome], mensagem de alerta...'},
-    {value: 'mensagem2', label: 'Olá, boa tarde [nome], mensagem de alerta...'},
-    {value: 'mensagem3', label: 'Olá, boa noite [nome], mensagem de alerta...'},
+export function Home () {
+  const templates = [
+    {value: 'template-alert', label: 'Template de Alerta'},
+    {value: 'template-host', label: 'Template novo Host'},
+    {value: 'template-disable', label: 'Template de Desativação'},
   ]
 
   return (
     <div className="container">
-      <h1>MessageForms.com</h1>
+      <Title title="MessageForms.com"/>
       <div className="row">
-          <Input name="Telefone" type="tel" title="Telefone" placeholder=" (DDD) 9xxxx-xxxx"/>
-
-          <Input  name="Nome" type="text" title="Nome" placeholder=" Nome" />
-
-          <Select 
-            options={alertValues}
-            title="Alerta"
-            name="Alerta"
-          />
-      </div>
-
-      <div className="row">
-        <Input name="Host" type="text" title="Host" placeholder=" Host" />
-
-        <Input name="IPHost" type="number" title="IP do Host" placeholder=" XXX.XXX.XXX"/>
-
-        <Input name="TotalAlertas" type="number" title="Total de Alertas" placeholder=" Quantidade de Alertas"/>
-      </div>
-
-      <div className="row">
-      
-        <Select
-          options={messageValues}
-          title="Selecione a mensagem"
-          name="Mensagens"
+        <Select 
+          options={templates}
+          title="Templates"
+          name="templates"
         />
 
-        <Input name="Data" type="date" title="Data" placeholder=""/>
-
-        <Input name="Horas" type="time" title="Hora de Solução" placeholder=""/>
+        <Input  name="Nome" type="text" title="Novo template" placeholder="Nome do novo template" />
       </div>
 
-      <Input className="mensagemCompleta" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
-
-      <Button type="button" className="button">Enviar</Button>
+      <Button type="button" className="button">Entrar</Button>
 
     </div>
   )
