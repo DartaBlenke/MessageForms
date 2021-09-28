@@ -1,4 +1,4 @@
-import '../styles/title.scss';
+import '../comp_styles/title.scss';
 
 interface TitleProps extends React.HTMLProps<HTMLTitleElement> {
   title: string;

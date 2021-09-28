@@ -1,4 +1,4 @@
-import '../styles/inputs.scss';
+import '../comp_styles/inputs.scss';
 
 type Options = {
   label: string;
