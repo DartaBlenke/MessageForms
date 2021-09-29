@@ -2,8 +2,8 @@ import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 import { Select } from "../components/Select";
 import { Title } from "../components/Title";
-import '../styles/home.scss';
-import '../styles/global.scss';
+import '../page_styles/home.scss';
+import '../page_styles/global.scss';
 
 export function Home () {
   const templates = [

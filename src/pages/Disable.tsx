@@ -66,7 +66,10 @@ export function Disable () {
 
       <Input className="competeMessage" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
 
-      <Button type="button" className="button">Enviar</Button>
+      <div className="bottom">
+        <Button type="button" className="backbutton">Voltar</Button>
+        <Button type="button" className="submitbutton">Enviar</Button>
+      </div>
 
     </div>
   )

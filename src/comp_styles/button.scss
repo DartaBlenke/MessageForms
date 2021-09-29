@@ -4,7 +4,41 @@
   font-size: 17px;
   border: none;
   border-radius: 5px;
-  background:var(--purple);
+  background: var(--purple);
+  color: #FFFFFF;
+  padding: 0 15px;
+  margin: 25px 0;
+
+  &:hover {
+    filter: brightness(0.9);
+    cursor: pointer;
+  }
+}
+
+.submitbutton {
+  height: 35px;
+  width: 130px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  background: rgb(62, 158, 62);
+  color: #FFFFFF;
+  padding: 0 15px;
+  margin: 25px 0;
+
+  &:hover {
+    filter: brightness(0.9);
+    cursor: pointer;
+  }
+}
+
+.backbutton {
+  height: 35px;
+  width: 130px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  background: rgb(199, 57, 57);
   color: #FFFFFF;
   padding: 0 15px;
   margin: 25px 0;

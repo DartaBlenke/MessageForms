@@ -8,7 +8,7 @@ export function Check(props: CheckProps) {
   return (
     <div className="checks">
     <input {...props} />
-    <h4>{props.title}</h4>
+    <label htmlFor={props.id}>{props.title}</label>
     </div>
   )
 }

@@ -2,8 +2,8 @@ import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 import { Select } from "../components/Select";
 import { Title } from "../components/Title";
-import '../styles/alert.scss';
-import '../styles/global.scss';
+import '../page_styles/alert.scss';
+import '../page_styles/global.scss';
  
 export function Alert () {
   const alertValues = [
@@ -57,7 +57,10 @@ export function Alert () {
 
       <Input className="competeMessage" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
 
-      <Button type="button" className="button">Enviar</Button>
+      <div className="bottom">
+        <Button type="button" className="backbutton">Voltar</Button>
+        <Button type="button" className="submitbutton">Enviar</Button>
+      </div>
 
     </div>
   )

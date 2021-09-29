@@ -7,6 +7,13 @@
   width: 90vw;
   margin: 0 auto;
 
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+
   .row {
     width: 100%;
     display: flex;
@@ -19,5 +26,11 @@
     flex-direction: row;
     align-items: center;
     margin: 20px 0;
+  }
+
+  .bottom {
+    width: 60vh;
+    display: flex;
+    justify-content: space-around;
   }
 }
