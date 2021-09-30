@@ -4,7 +4,7 @@ import { New_Host } from "./pages/New_Host";
 
 function App() {
   return (
-    <Alert />
+    <New_Host />
     //<Home />
   );
 }

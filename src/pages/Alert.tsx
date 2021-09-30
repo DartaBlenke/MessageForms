@@ -25,7 +25,7 @@ export function Alert () {
       <div className="row">
           <Input name="Telefone" type="tel" title="Telefone" placeholder=" (DDD) 9xxxx-xxxx"/>
 
-          <Input  name="Nome" type="text" title="Nome" placeholder=" Nome" />
+          <Input name="Nome" type="text" title="Nome" placeholder=" Nome" />
 
           <Select 
             options={alertValues}

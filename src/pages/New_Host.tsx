@@ -3,6 +3,8 @@ import { Button } from "../components/Button";
 import { Select } from "../components/Select";
 import { Title } from "../components/Title";
 import { Check } from "../components/Check";
+import { IpInput } from "../components/IP"
+import { Phone } from "../components/Phone"
 import '../page_styles/new_host.scss';
 import '../page_styles/global.scss';
 
@@ -36,9 +38,9 @@ export function New_Host () {
         <Title title="Template Novo Host"/>
       </div>
       <div className="row">
-          <Input name="Telefone" type="tel" title="Telefone" placeholder=" (DDD) 9xxxx-xxxx"/>
+          <Phone name="Telefone" type="text" title="Telefone" placeholder=" (DDD) 9xxxx-xxxx" />
 
-          <Input  name="Nome" type="text" title="Nome" placeholder=" Nome" />
+          <Input name="Nome" type="text" title="Nome" placeholder=" Nome" />
 
           <Select 
             options={company_values}
@@ -50,7 +52,7 @@ export function New_Host () {
       <div className="row">
         <Input name="Host" type="text" title="Host" placeholder=" Host" />
 
-        <Input name="IPHost" type="number" title="IP do Host" placeholder=" XXX.XXX.XXX.XXX"/>
+        <IpInput name="IPHost" type="text" title="IP do Host" placeholder=" XXX.XXX.XXX.XXX" />
 
         <Select 
             options={service_values}
@@ -67,9 +69,9 @@ export function New_Host () {
           name="Mensagens"
         />
 
-        <Input name="criacaoData" type="date" title="Data de Criação" placeholder=""/>
+        <Input name="criacaoData" type="date" title="Data de Criação" placeholder="" />
 
-        <Input name="chamadoNumero" type="text" title="Chamado" placeholder="Número do chamado"/>
+        <Input name="chamadoNumero" type="text" title="Chamado" placeholder="Número do chamado" />
       </div>
 
       <div className="checkBox">
@@ -82,6 +84,7 @@ export function New_Host () {
       </div>
       
       <Input className="competeMessage" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
+      
       <div className="bottom">
         <Button type="button" className="backbutton">Voltar</Button>
         <Button type="button" className="submitbutton">Enviar</Button>

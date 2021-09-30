@@ -22,7 +22,7 @@ export function Home () {
           name="templates"
         />
 
-        <Input  name="Nome" type="text" title="Novo template" placeholder="Nome do novo template" />
+        <Input name="Nome" type="text" title="Novo template" placeholder="Nome do novo template" />
       </div>
 
       <Button type="button" className="button">Entrar</Button>
