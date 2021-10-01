@@ -23,7 +23,9 @@
 
 }
 
-.competeMessage {
+.completeMessage {
+  grid-column: 1/4;
+  justify-self: center;
   width: 700px !important;
   height: 70px !important;
 }

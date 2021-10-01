@@ -20,9 +20,9 @@ export function Alert () {
   ]
 
   return (
-    <div className="container">
+    <div className="alert">
       <Title title="Template Alerta"/>
-      <div className="row">
+      <div className="alert-row">
           <Input name="Telefone" type="tel" title="Telefone" placeholder=" (DDD) 9xxxx-xxxx"/>
 
           <Input name="Nome" type="text" title="Nome" placeholder=" Nome" />
@@ -34,7 +34,7 @@ export function Alert () {
           />
       </div>
 
-      <div className="row">
+      <div className="alert-row">
         <Input name="Host" type="text" title="Host" placeholder=" Host" />
 
         <Input name="IPHost" type="number" title="IP do Host" placeholder=" XXX.XXX.XXX.XXX"/>
@@ -42,7 +42,7 @@ export function Alert () {
         <Input name="TotalAlertas" type="number" title="Total de Alertas" placeholder=" Quantidade de Alertas"/>
       </div>
 
-      <div className="row">
+      <div className="alert-row">
       
         <Select
           options={messageValues}
@@ -55,7 +55,7 @@ export function Alert () {
         <Input name="DataSolucao" type="datetime-local" title="Data de Solução" placeholder=""/>
       </div>
 
-      <Input className="competeMessage" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
+      <Input className="completeMessage" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
 
       <div className="bottom">
         <Button type="button" className="backbutton">Voltar</Button>

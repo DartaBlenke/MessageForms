@@ -7,6 +7,7 @@ import { IpInput } from "../components/IP"
 import { Phone } from "../components/Phone"
 import '../page_styles/new_host.scss';
 import '../page_styles/global.scss';
+import { useHistory } from "react-router-dom";
 
 export function New_Host () {
   const company_values = [
@@ -32,12 +33,17 @@ export function New_Host () {
     {value: 'mensagem4', label: 'Olá, boa noite [nome], mensagem de alerta...'},
   ]
 
+  const history = useHistory();
+  function back() {
+    history.push('/')
+  }
+
   return (
-    <div className="container">
+    <div className="new_host">
       <div className="header">
         <Title title="Template Novo Host"/>
       </div>
-      <div className="row">
+      <div className="new-row">
           <Phone name="Telefone" type="text" title="Telefone" placeholder=" (DDD) 9xxxx-xxxx" />
 
           <Input name="Nome" type="text" title="Nome" placeholder=" Nome" />
@@ -49,7 +55,7 @@ export function New_Host () {
           />
       </div>
 
-      <div className="row">
+      <div className="new-row">
         <Input name="Host" type="text" title="Host" placeholder=" Host" />
 
         <IpInput name="IPHost" type="text" title="IP do Host" placeholder=" XXX.XXX.XXX.XXX" />
@@ -61,8 +67,7 @@ export function New_Host () {
           />
       </div>
 
-      <div className="row">
-  
+      <div className="new-row">
         <Select
           options={message_values}
           title="Selecione a mensagem"
@@ -75,7 +80,6 @@ export function New_Host () {
       </div>
 
       <div className="checkBox">
-  
         <Check id="needAdd" name="zabbix" type="radio" title="Necessário adicionar ao Zabbix" placeholder=""/>
 
         <Check id="added" name="zabbix" type="radio" title="Foi adicionado ao Zabbix" placeholder=""/>
@@ -83,10 +87,10 @@ export function New_Host () {
         <Check id="wasAdd" name="zabbix" type="radio" title="Já está no Zabbix" placeholder=""/>
       </div>
       
-      <Input className="competeMessage" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
+      <Input className="completeMessage" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
       
       <div className="bottom">
-        <Button type="button" className="backbutton">Voltar</Button>
+        <Button onClick={back} type="button" className="backbutton">Voltar</Button>
         <Button type="button" className="submitbutton">Enviar</Button>
       </div>
 

@@ -2,10 +2,10 @@ import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 import { Select } from "../components/Select";
 import { Title } from "../components/Title";
-import '../styles/disable.scss';
-import '../styles/global.scss';
+import '../page_styles/disable.scss';
+import '../page_styles/global.scss';
 
-export function Disable () {
+export function Disable() {
   const companyValues = [
     {value: 'company1', label: 'Unimed'},
     {value: 'company2', label: 'Elgin'},
@@ -25,9 +25,9 @@ export function Disable () {
   ]
 
   return (
-    <div className="container">
+    <div className="disable">
       <Title title="Template Desativação"/>
-      <div className="row">
+      <div className="disable-row">
           <Input name="Telefone" type="tel" title="Telefone" placeholder=" (DDD) 9xxxx-xxxx"/>
 
           <Input name="Nome" type="text" title="Nome" placeholder=" Nome" />
@@ -39,7 +39,7 @@ export function Disable () {
           />
       </div>
 
-      <div className="row">
+      <div className="disable-row">
         <Input name="Host" type="text" title="Host" placeholder=" Host" />
 
         <Input name="IPHost" type="number" title="IP do Host" placeholder=" XXX.XXX.XXX.XXX"/>
@@ -51,7 +51,7 @@ export function Disable () {
           />
       </div>
 
-      <div className="row">
+      <div className="disable-row">
       
         <Select
           options={messageValues}
@@ -64,7 +64,7 @@ export function Disable () {
         <Input name="chamadoNumero" type="text" title="Chamado" placeholder="Número do chamado"/>
       </div>
 
-      <Input className="competeMessage" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
+      <Input className="completeMessage" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
 
       <div className="bottom">
         <Button type="button" className="backbutton">Voltar</Button>
