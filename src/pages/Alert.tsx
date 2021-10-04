@@ -5,13 +5,18 @@ import { Title } from "../components/Title";
 import '../page_styles/alert.scss';
 import '../page_styles/global.scss';
 import { useHistory } from "react-router-dom";
+import { IpInput } from "../components/IP";
+import { Phone } from "../components/Phone";
+import { Message } from "../components/Message";
+import { useState } from "react";
  
 export function Alert () {
+
   const alertValues = [
-    {value: 'alerta1', label: 'Alerta de Zabbix fora do ar'},
-    {value: 'alerta2', label: 'Alerta de DBForbix fora do ar'},
-    {value: 'alerta3', label: 'Alerta de Orabbix fora do ar'},
-    {value: 'alerta4', label: 'Alerta de todos os Agentes fora do ar'},
+    {value: 'Zabbix fora do ar', label: 'Zabbix fora do ar'},
+    {value: 'DBForbix fora do ar', label: 'DBForbix fora do ar'},
+    {value: 'Orabbix fora do ar', label: 'Orabbix fora do ar'},
+    {value: 'Todos os Agentes fora do ar', label: 'Todos os Agentes fora do ar'},
   ]
 
   const messageValues = [
@@ -25,11 +30,30 @@ export function Alert () {
     history.push('/')
   }
 
+  const [ phone, setPhone ] = useState('');
+
+  function phoneNumber(event: React.FormEvent) {
+    setPhone(((event.target) as any).value);
+  }
+
+  const [ alert, setalert ] = useState('');
+
+  function selectAlert(event: React.FormEvent) {
+    setalert(((event.target) as any).value);
+  }
+
   return (
     <div className="alert">
       <Title title="Template Alerta"/>
       <div className="alert-row">
-          <Input name="Telefone" type="tel" title="Telefone" placeholder=" (DDD) 9xxxx-xxxx"/>
+          <Phone 
+            name="Telefone" 
+            type="text"
+            value={phone} 
+            onChange={(e) => phoneNumber(e)} 
+            title="Telefone" 
+            placeholder=" (DDD) 9xxxx-xxxx"
+          />
 
           <Input name="Nome" type="text" title="Nome" placeholder=" Nome" />
 
@@ -37,13 +61,15 @@ export function Alert () {
             options={alertValues}
             title="Alerta"
             name="Alerta"
+            value={alert}
+            onChange={(e) => selectAlert(e)}
           />
       </div>
 
       <div className="alert-row">
         <Input name="Host" type="text" title="Host" placeholder=" Host" />
 
-        <Input name="IPHost" type="number" title="IP do Host" placeholder=" XXX.XXX.XXX.XXX"/>
+        <IpInput name="IPHost" type="text" title="IP do Host" placeholder=" XXX.XXX.XXX.XXX"/>
 
         <Input name="TotalAlertas" type="number" title="Total de Alertas" placeholder=" Quantidade de Alertas"/>
       </div>
@@ -61,7 +87,7 @@ export function Alert () {
         <Input name="DataSolucao" type="datetime-local" title="Data de Solução" placeholder=""/>
       </div>
 
-      <Input className="completeMessage" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
+      <Message value={alert} name="CompleteMessage" title="Mensagem completa" placeholder=" Veja aqui a mensagem completa"/>
 
       <div className="bottom">
         <Button onClick={back} type="button" className="backbutton">Voltar</Button>

@@ -5,6 +5,10 @@ import { Title } from "../components/Title";
 import '../page_styles/disable.scss';
 import '../page_styles/global.scss';
 import { useHistory } from "react-router-dom";
+import { Called } from "../components/Called";
+import { IpInput } from "../components/IP";
+import { Phone } from "../components/Phone";
+import { Message } from "../components/Message";
 
 export function Disable() {
   const companyValues = [
@@ -34,7 +38,7 @@ export function Disable() {
     <div className="disable">
       <Title title="Template Desativação"/>
       <div className="disable-row">
-          <Input name="Telefone" type="tel" title="Telefone" placeholder=" (DDD) 9xxxx-xxxx"/>
+          <Phone name="Telefone" type="tel" title="Telefone" placeholder=" (DDD) 9xxxx-xxxx"/>
 
           <Input name="Nome" type="text" title="Nome" placeholder=" Nome" />
 
@@ -48,7 +52,7 @@ export function Disable() {
       <div className="disable-row">
         <Input name="Host" type="text" title="Host" placeholder=" Host" />
 
-        <Input name="IPHost" type="number" title="IP do Host" placeholder=" XXX.XXX.XXX.XXX"/>
+        <IpInput name="IPHost" type="text" title="IP do Host" placeholder=" XXX.XXX.XXX.XXX"/>
 
         <Select 
             options={disableValues}
@@ -67,10 +71,10 @@ export function Disable() {
 
         <Input name="desativacaoData" type="date" title="Data de Desativação" placeholder=""/>
 
-        <Input name="chamadoNumero" type="text" title="Chamado" placeholder="Número do chamado"/>
+        <Called name="chamadoNumero" type="text" title="Chamado" placeholder="Número do chamado"/>
       </div>
 
-      <Input className="completeMessage" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
+      <Message name="CompleteMessage" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
 
       <div className="bottom">
         <Button onClick={back} type="button" className="backbutton">Voltar</Button>

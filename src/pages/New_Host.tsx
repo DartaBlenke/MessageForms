@@ -5,9 +5,11 @@ import { Title } from "../components/Title";
 import { Check } from "../components/Check";
 import { IpInput } from "../components/IP"
 import { Phone } from "../components/Phone"
+import { Called } from "../components/Called"
 import '../page_styles/new_host.scss';
 import '../page_styles/global.scss';
 import { useHistory } from "react-router-dom";
+import { Message } from "../components/Message";
 
 export function New_Host () {
   const company_values = [
@@ -76,7 +78,7 @@ export function New_Host () {
 
         <Input name="criacaoData" type="date" title="Data de Criação" placeholder="" />
 
-        <Input name="chamadoNumero" type="text" title="Chamado" placeholder="Número do chamado" />
+        <Called name="chamadoNumero" type="text" title="Chamado" placeholder="Número do chamado" />
       </div>
 
       <div className="checkBox">
@@ -87,7 +89,7 @@ export function New_Host () {
         <Check id="wasAdd" name="zabbix" type="radio" title="Já está no Zabbix" placeholder=""/>
       </div>
       
-      <Input className="completeMessage" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
+      <Message name="CompleteMessage" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
       
       <div className="bottom">
         <Button onClick={back} type="button" className="backbutton">Voltar</Button>

@@ -18,7 +18,6 @@ export function Home () {
 
    function navigate() {
      history.push(route)
-
    }
 
   const templates = [
