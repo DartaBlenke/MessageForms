@@ -6,22 +6,25 @@ import { useHistory } from "react-router-dom";
 import '../page_styles/home.scss';
 import '../page_styles/global.scss';
 import { useState } from "react";
+import React from "react";
 
 export function Home () {
   const history = useHistory();
-  //const { rota, setRota } = useState();
+  const [ route, setRoute ] = useState('/alert');
+
+  function selectRoute(event: React.FormEvent) {
+    setRoute(((event.target) as any).value);
+  }
 
    function navigate() {
-     history.push('/new_host')
-  //   if (rota == alert) {
-      
-  //   }
+     history.push(route)
+
    }
 
   const templates = [
-    {value: 'alert', label: 'Template de Alerta'},
-    {value: 'new_host', label: 'Template novo Host'},
-    {value: 'disable', label: 'Template de Desativação'},
+    {value: '/alert', label: 'Template de Alerta'},
+    {value: '/new_host', label: 'Template novo Host'},
+    {value: '/disable', label: 'Template de Desativação'},
   ]
 
   return (
@@ -29,6 +32,7 @@ export function Home () {
       <Title title="MessageForms.com"/>
       <div className="templateSelect">
         <Select 
+          onChange={(e) => selectRoute(e) }
           options={templates}
           title="Templates"
           name="templates"

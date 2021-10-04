@@ -4,6 +4,7 @@ import { Select } from "../components/Select";
 import { Title } from "../components/Title";
 import '../page_styles/alert.scss';
 import '../page_styles/global.scss';
+import { useHistory } from "react-router-dom";
  
 export function Alert () {
   const alertValues = [
@@ -18,6 +19,11 @@ export function Alert () {
     {value: 'mensagem2', label: 'Olá, boa tarde [nome], mensagem de alerta...'},
     {value: 'mensagem3', label: 'Olá, boa noite [nome], mensagem de alerta...'},
   ]
+
+  const history = useHistory();
+  function back() {
+    history.push('/')
+  }
 
   return (
     <div className="alert">
@@ -58,7 +64,7 @@ export function Alert () {
       <Input className="completeMessage" name="CompleteMessage" type="text" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>
 
       <div className="bottom">
-        <Button type="button" className="backbutton">Voltar</Button>
+        <Button onClick={back} type="button" className="backbutton">Voltar</Button>
         <Button type="button" className="submitbutton">Enviar</Button>
       </div>
 
