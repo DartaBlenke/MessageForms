@@ -1,0 +1,7 @@
+{
+  "compType":"Iput",
+  "name":"Name", 
+  "type":"text", 
+  "title":"Nome", 
+  "placeholder":" Nome"
+}

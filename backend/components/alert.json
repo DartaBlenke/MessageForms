@@ -1,0 +1,6 @@
+{
+  "compType":"Select",
+  "name":"Alert",
+  "title":"Alerta",
+  "options":"{alertValues}"
+}

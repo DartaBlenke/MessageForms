@@ -1,0 +1,7 @@
+{
+  "compType":"Iput",
+  "name":"IPHost", 
+  "type":"text", 
+  "title":"IP do Host", 
+  "placeholder":" XXX.XXX.XXX.XXX"
+}

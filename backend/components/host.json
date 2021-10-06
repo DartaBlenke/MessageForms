@@ -1,0 +1,7 @@
+{
+  "compType":"Iput",
+  "name":"Host", 
+  "type":"text", 
+  "title":"Host", 
+  "placeholder":" Host"
+}

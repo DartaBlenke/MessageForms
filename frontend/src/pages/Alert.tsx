@@ -2,13 +2,13 @@ import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 import { Select } from "../components/Select";
 import { Title } from "../components/Title";
-import '../page_styles/alert.scss';
-import '../page_styles/global.scss';
-import { useHistory } from "react-router-dom";
 import { IpInput } from "../components/IP";
 import { Phone } from "../components/Phone";
 import { Message } from "../components/Message";
+import { useHistory } from "react-router-dom";
 import { useState } from "react";
+import '../page_styles/alert.scss';
+import '../page_styles/global.scss';
  
 export function Alert () {
 
@@ -19,10 +19,11 @@ export function Alert () {
     {value: 'Todos os Agentes fora do ar', label: 'Todos os Agentes fora do ar'},
   ]
 
-  const messageValues = [
-    {value: 'mensagem1', label: 'Olá, bom dia [nome], mensagem de alerta...'},
-    {value: 'mensagem2', label: 'Olá, boa tarde [nome], mensagem de alerta...'},
-    {value: 'mensagem3', label: 'Olá, boa noite [nome], mensagem de alerta...'},
+  const companyValues = [
+    {value: 'Unimed', label: 'Unimed'},
+    {value: 'Elgin', label: 'Elgin'},
+    {value: 'CDF', label: 'CDF'},
+    {value: 'Krona', label: 'Krona'},
   ]
 
   const history = useHistory();
@@ -55,12 +56,12 @@ export function Alert () {
             placeholder=" (DDD) 9xxxx-xxxx"
           />
 
-          <Input name="Nome" type="text" title="Nome" placeholder=" Nome" />
+          <Input name="Name" type="text" title="Nome" placeholder=" Nome" />
 
           <Select 
             options={alertValues}
             title="Alerta"
-            name="Alerta"
+            name="Alert"
             value={alert}
             onChange={(e) => selectAlert(e)}
           />
@@ -71,20 +72,20 @@ export function Alert () {
 
         <IpInput name="IPHost" type="text" title="IP do Host" placeholder=" XXX.XXX.XXX.XXX"/>
 
-        <Input name="TotalAlertas" type="number" title="Total de Alertas" placeholder=" Quantidade de Alertas"/>
+        <Select 
+          options={companyValues}
+          title="Empresas"
+          name="empresas"
+        />
       </div>
 
       <div className="alert-row">
-      
-        <Select
-          options={messageValues}
-          title="Selecione a mensagem"
-          name="Mensagens"
-        />
+        
+        <Input name="AllAlerts" type="number" title="Total de Alertas" placeholder=" Quantidade de Alertas"/>
+        
+        <Input name="Date" type="date" title="Data do Alerta" placeholder=""/>
 
-        <Input name="Data" type="date" title="Data do Alerta" placeholder=""/>
-
-        <Input name="DataSolucao" type="datetime-local" title="Data de Solução" placeholder=""/>
+        <Input name="DateSolution" type="datetime-local" title="Data de Solução" placeholder=""/>
       </div>
 
       <Message value={alert} name="CompleteMessage" title="Mensagem completa" placeholder=" Veja aqui a mensagem completa"/>

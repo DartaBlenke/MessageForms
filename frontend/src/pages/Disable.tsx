@@ -40,7 +40,7 @@ export function Disable() {
       <div className="disable-row">
           <Phone name="Telefone" type="tel" title="Telefone" placeholder=" (DDD) 9xxxx-xxxx"/>
 
-          <Input name="Nome" type="text" title="Nome" placeholder=" Nome" />
+          <Input name="Name" type="text" title="Nome" placeholder=" Nome" />
 
           <Select 
             options={companyValues}

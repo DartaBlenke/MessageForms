@@ -48,7 +48,7 @@ export function New_Host () {
       <div className="new-row">
           <Phone name="Telefone" type="text" title="Telefone" placeholder=" (DDD) 9xxxx-xxxx" />
 
-          <Input name="Nome" type="text" title="Nome" placeholder=" Nome" />
+          <Input name="Name" type="text" title="Nome" placeholder=" Nome" />
 
           <Select 
             options={company_values}
@@ -82,11 +82,11 @@ export function New_Host () {
       </div>
 
       <div className="checkBox">
-        <Check id="needAdd" name="zabbix" type="radio" title="Necessário adicionar ao Zabbix" placeholder=""/>
+        <Check id="needAdd" name="check" type="radio" title="Necessário adicionar ao Zabbix" placeholder=""/>
 
-        <Check id="added" name="zabbix" type="radio" title="Foi adicionado ao Zabbix" placeholder=""/>
+        <Check id="added" name="check" type="radio" title="Foi adicionado ao Zabbix" placeholder=""/>
 
-        <Check id="wasAdd" name="zabbix" type="radio" title="Já está no Zabbix" placeholder=""/>
+        <Check id="wasAdd" name="check" type="radio" title="Já está no Zabbix" placeholder=""/>
       </div>
       
       <Message name="CompleteMessage" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>

@@ -1,0 +1,7 @@
+{
+  "compType":"Iput",
+  "name":"AllAlerts", 
+  "type":"number", 
+  "title":"Total de Alertas", 
+  "placeholder":" Quantidade de Alertas"
+}
