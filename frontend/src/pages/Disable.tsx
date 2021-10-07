@@ -11,19 +11,19 @@ import { Phone } from "../components/Phone";
 import { Message } from "../components/Message";
 
 export function Disable() {
-  const companyValues = [
+  const company_values = [
     {value: 'company1', label: 'Unimed'},
     {value: 'company2', label: 'Elgin'},
     {value: 'company3', label: 'CDF'},
     {value: 'company4', label: 'Krona'},
   ]
 
-  const disableValues = [
+  const disable_values = [
     {value: 'disable1', label: 'Host desativado do monitormaneto conforme solicitação do cliente'},
     {value: 'disable2', label: 'Monitoramento migrado'},
   ]
 
-  const messageValues = [
+  const message_values = [
     {value: 'mensagem1', label: 'Olá, bom dia [nome], mensagem de alerta...'},
     {value: 'mensagem2', label: 'Olá, boa tarde [nome], mensagem de alerta...'},
     {value: 'mensagem3', label: 'Olá, boa noite [nome], mensagem de alerta...'},
@@ -43,7 +43,7 @@ export function Disable() {
           <Input name="Name" type="text" title="Nome" placeholder=" Nome" />
 
           <Select 
-            options={companyValues}
+            options={company_values}
             title="Empresas"
             name="empresas"
           />
@@ -55,23 +55,23 @@ export function Disable() {
         <IpInput name="IPHost" type="text" title="IP do Host" placeholder=" XXX.XXX.XXX.XXX"/>
 
         <Select 
-            options={disableValues}
+            options={disable_values}
             title="Movito da desativação"
-            name="desativacao"
+            name="disable"
           />
       </div>
 
       <div className="disable-row">
       
         <Select
-          options={messageValues}
+          options={message_values}
           title="Selecione a mensagem"
           name="Mensagens"
         />
 
-        <Input name="desativacaoData" type="date" title="Data de Desativação" placeholder=""/>
+        <Input name="DisableDate" type="date" title="Data de Desativação" placeholder=""/>
 
-        <Called name="chamadoNumero" type="text" title="Chamado" placeholder="Número do chamado"/>
+        <Called name="Called" type="text" title="Chamado" placeholder="Número do chamado"/>
       </div>
 
       <Message name="CompleteMessage" title="Mensagem completa" placeholder="Veja aqui a mensagem completa"/>

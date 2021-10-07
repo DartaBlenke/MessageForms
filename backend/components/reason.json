@@ -1,0 +1,6 @@
+{
+  "compType":"Select",
+  "name":"disable",
+  "title":"Movito da desativação",
+  "options":"{disable_values}"
+}

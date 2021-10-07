@@ -1,0 +1,6 @@
+{
+  "compType":"Select",
+  "name":"services",
+  "title":"Serviços",
+  "options":"{service_values}"
+}

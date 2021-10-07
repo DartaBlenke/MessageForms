@@ -1,0 +1,7 @@
+{
+  "compType":"Iput",
+  "name":"DateSolution", 
+  "type":"date", 
+  "title":"Data de Solução", 
+  "placeholder":""
+}

@@ -1,0 +1,7 @@
+{
+  "compType":"Iput",
+  "name":"called", 
+  "type":"text", 
+  "title":"Chamado", 
+  "placeholder":"Número do chamado"
+}

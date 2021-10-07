@@ -2,5 +2,5 @@
   "compType":"Select",
   "name":"Alert",
   "title":"Alerta",
-  "options":"{alertValues}"
+  "options":"{alert_values}"
 }

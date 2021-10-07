@@ -12,14 +12,14 @@ import '../page_styles/global.scss';
  
 export function Alert () {
 
-  const alertValues = [
+  const alert_values = [
     {value: 'Zabbix fora do ar', label: 'Zabbix fora do ar'},
     {value: 'DBForbix fora do ar', label: 'DBForbix fora do ar'},
     {value: 'Orabbix fora do ar', label: 'Orabbix fora do ar'},
     {value: 'Todos os Agentes fora do ar', label: 'Todos os Agentes fora do ar'},
   ]
 
-  const companyValues = [
+  const company_values = [
     {value: 'Unimed', label: 'Unimed'},
     {value: 'Elgin', label: 'Elgin'},
     {value: 'CDF', label: 'CDF'},
@@ -59,7 +59,7 @@ export function Alert () {
           <Input name="Name" type="text" title="Nome" placeholder=" Nome" />
 
           <Select 
-            options={alertValues}
+            options={alert_values}
             title="Alerta"
             name="Alert"
             value={alert}
@@ -73,9 +73,9 @@ export function Alert () {
         <IpInput name="IPHost" type="text" title="IP do Host" placeholder=" XXX.XXX.XXX.XXX"/>
 
         <Select 
-          options={companyValues}
+          options={company_values}
           title="Empresas"
-          name="empresas"
+          name="Company"
         />
       </div>
 
@@ -83,9 +83,9 @@ export function Alert () {
         
         <Input name="AllAlerts" type="number" title="Total de Alertas" placeholder=" Quantidade de Alertas"/>
         
-        <Input name="Date" type="date" title="Data do Alerta" placeholder=""/>
+        <Input name="DateAlert" type="date" title="Data do Alerta" placeholder=""/>
 
-        <Input name="DateSolution" type="datetime-local" title="Data de Solução" placeholder=""/>
+        <Input name="DateSolution" type="date" title="Data de Solução" placeholder=""/>
       </div>
 
       <Message value={alert} name="CompleteMessage" title="Mensagem completa" placeholder=" Veja aqui a mensagem completa"/>

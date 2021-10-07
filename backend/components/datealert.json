@@ -1,0 +1,7 @@
+{
+  "compType":"Iput",
+  "name":"DateAlert", 
+  "type":"date", 
+  "title":"Data do Alerta", 
+  "placeholder":""
+}

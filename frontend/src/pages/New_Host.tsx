@@ -65,7 +65,7 @@ export function New_Host () {
         <Select 
             options={service_values}
             title="Serviços"
-            name="servicos"
+            name="services"
           />
       </div>
 
@@ -76,9 +76,9 @@ export function New_Host () {
           name="Mensagens"
         />
 
-        <Input name="criacaoData" type="date" title="Data de Criação" placeholder="" />
+        <Input name="createDate" type="date" title="Data de Criação" placeholder="" />
 
-        <Called name="chamadoNumero" type="text" title="Chamado" placeholder="Número do chamado" />
+        <Called name="called" type="text" title="Chamado" placeholder="Número do chamado" />
       </div>
 
       <div className="checkBox">

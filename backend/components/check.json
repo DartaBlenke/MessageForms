@@ -1,0 +1,7 @@
+{
+  "compType":"Check",
+  "name":"check",
+  "type":"radio", 
+  "title":"Necessário adicionar ao Zabbix",
+  "placeholder":""
+}

@@ -1,0 +1,7 @@
+{
+  "compType":"Input",
+  "name":"createDate",
+  "type":"date", 
+  "title":"Data de Criação",
+  "placeholder":""
+}
