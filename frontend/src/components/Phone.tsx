@@ -7,7 +7,7 @@ interface PhoneProps extends React.HTMLProps<HTMLInputElement> {
 
 export function Phone(props: PhoneProps){
 
-  const handleKeyUp = useCallback((e: React.FormEvent<HTMLInputElement>) =>{
+  const handleKeyDown = useCallback((e: React.FormEvent<HTMLInputElement>) =>{
     // (DDD) 9XXXX-XXXX
     e.currentTarget.maxLength = 15;
     let value = e.currentTarget.value;
@@ -21,7 +21,7 @@ export function Phone(props: PhoneProps){
   return (
     <div className="inputs">
       <h3>{props.title}</h3>
-      <input {...props} onKeyUp={handleKeyUp}/>
+      <input {...props} onKeyDown={handleKeyDown}/>
     </div>
   )
 }
