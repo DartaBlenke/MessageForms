@@ -2,5 +2,8 @@
   "compType":"Select",
   "name":"disable",
   "title":"Movito da desativação",
-  "options":"{disable_values}"
+  "options":"[
+    {value: 'disable1', label: 'Host desativado do monitormaneto conforme solicitação do cliente'},
+    {value: 'disable2', label: 'Monitoramento migrado'},
+  ]"
 }

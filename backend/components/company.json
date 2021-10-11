@@ -2,5 +2,11 @@
   "compType":"Select",
   "name":"Company",
   "title":"Empresas",
-  "options":"{company_values}"
+  "options":"[
+    {value: 'company1', label: 'Selecione a empresa'},
+    {value: 'company2', label: 'Elgin'},
+    {value: 'company3', label: 'CDF'},
+    {value: 'company4', label: 'Krona'},
+    {value: 'company5', label: 'Unimed'},
+  ]"
 }

@@ -20,10 +20,11 @@ export function Alert () {
   ]
 
   const company_values = [
-    {value: 'Unimed', label: 'Unimed'},
-    {value: 'Elgin', label: 'Elgin'},
-    {value: 'CDF', label: 'CDF'},
-    {value: 'Krona', label: 'Krona'},
+    {value: 'company1', label: 'Selecione a empresa'},
+    {value: 'company2', label: 'Elgin'},
+    {value: 'company3', label: 'CDF'},
+    {value: 'company4', label: 'Krona'},
+    {value: 'company5', label: 'Unimed'},
   ]
 
   const history = useHistory();

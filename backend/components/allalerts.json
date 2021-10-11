@@ -1,5 +1,5 @@
 {
-  "compType":"Iput",
+  "compType":"Input",
   "name":"AllAlerts", 
   "type":"number", 
   "title":"Total de Alertas", 

@@ -1,5 +1,5 @@
 {
-  "compType":"Iput",
+  "compType":"Input",
   "name":"IPHost", 
   "type":"text", 
   "title":"IP do Host", 

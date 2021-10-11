@@ -1,5 +1,5 @@
 {
-  "compType":"Iput",
+  "compType":"Input",
   "name":"DisableDate", 
   "type":"date", 
   "title":"Data de Desativação", 
