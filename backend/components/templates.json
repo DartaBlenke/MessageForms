@@ -2,9 +2,9 @@
   "compType":"Select",    
   "title":"Templates",
   "name":"templates",
-  "options":"[
-    {value: '/alert', label: 'Template de Alerta'},
-    {value: '/new_host', label: 'Template novo Host'},
-    {value: '/disable', label: 'Template de Desativação'},
-  ]"
+  "options":[
+    {"value": "/alert", "label": "Template de Alerta"},
+    {"value": "/new_host", "label": "Template novo Host"},
+    {"value": "/disable", "label": "Template de Desativação"}
+  ]
 }

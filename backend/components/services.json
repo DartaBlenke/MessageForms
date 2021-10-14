@@ -2,11 +2,11 @@
   "compType":"Select",
   "name":"services",
   "title":"Serviços",
-  "options":"[
-    {value: 'disable1', label: 'Selecione o serviço'},
-    {value: 'disable2', label: 'Monitoramento Zabbix'},
-    {value: 'disable3', label: 'Monitoramento DBForbix'},
-    {value: 'disable4', label: 'Monitoramento Orabbix'},
-    {value: 'disable5', label: 'Todos os serviços'},
-  ]"
+  "options":[
+    {"value": "disable1", "label": "Selecione o serviço"},
+    {"value": "disable2", "label": "Monitoramento Zabbix"},
+    {"value": "disable3", "label": "Monitoramento DBForbix"},
+    {"value": "disable4", "label": "Monitoramento Orabbix"},
+    {"value": "disable5", "label": "Todos os serviços"}
+  ]
 }

@@ -2,10 +2,10 @@
   "compType":"Select",
   "name":"Alert",
   "title":"Alerta",
-  "options":"[
-    {value: 'Zabbix fora do ar', label: 'Zabbix fora do ar'},
-    {value: 'DBForbix fora do ar', label: 'DBForbix fora do ar'},
-    {value: 'Orabbix fora do ar', label: 'Orabbix fora do ar'},
-    {value: 'Todos os Agentes fora do ar', label: 'Todos os Agentes fora do ar'},
-  ]"
+  "options":[
+    {"value": "Zabbix fora do ar", "label": "Zabbix fora do ar"},
+    {"value": "DBForbix fora do ar", "label": "DBForbix fora do ar"},
+    {"value": "Orabbix fora do ar", "label": "Orabbix fora do ar"},
+    {"value": "Todos os Agentes fora do ar", "label": "Todos os Agentes fora do ar"}
+  ]
 }
