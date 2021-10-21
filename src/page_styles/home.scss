@@ -1,0 +1,16 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 70vw;
+  margin: 0 auto;
+
+  .templateSelect {
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+  }
+}
