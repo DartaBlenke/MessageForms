@@ -8,7 +8,6 @@ import '../page_styles/global.scss';
 import { useState } from "react";
 import React from "react";
 import axios from "axios";
-import { appendFile } from "fs";
 
 export function Home () {
   const history = useHistory();
